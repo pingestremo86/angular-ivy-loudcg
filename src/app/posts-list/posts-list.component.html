@@ -1,0 +1,10 @@
+<section>Posts</section>
+<a [routerLink]="['/create']">CreatePost</a>
+<table *ngFor="let singlepost of postList$ | async">
+    <tr><td><a [routerLink]="['/postid', singlepost.id]">PostDetail</a></td>
+        <td><a [routerLink]="['/editpost', singlepost.id]">EditPost</a></td>
+        <td>{{ singlepost | concatenation }}</td>
+        <td>{{ singlepost.title | uppercase }}</td>
+        <td>{{ singlepost.body }}</td>
+    </tr>
+  </table>

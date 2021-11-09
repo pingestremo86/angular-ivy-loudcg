@@ -1,0 +1,9 @@
+<h1>Post Creator</h1> 
+<form [formGroup]="createForm" (submit)="submit()">
+  Post Title: <input type="text" formControlName="title"/>
+  <p></p>
+  Post Body: <input type="test" formControlName="body"/>
+  <p>
+    <button type="submit" [disabled] = createForm.invalid>Submit Post</button>
+  </p>
+</form>

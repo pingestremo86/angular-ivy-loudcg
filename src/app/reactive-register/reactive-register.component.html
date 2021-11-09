@@ -1,0 +1,15 @@
+<h1>Reactive Login Form</h1>
+
+<form [formGroup]="loginForm" (submit)="login()">
+  Name: <input type="text" formControlName="name"/>
+  <p></p>
+  Username: <input type="text" formControlName="email"/>
+  <p></p>
+  Password: <input type="password" formControlName="password"/>
+  <p>
+  Privacy Terms <input type="checkbox" formControlName="privacyterms">
+</p>
+  <p>
+    <button type="submit" [disabled] = loginForm.invalid>Login</button>
+  </p>
+</form>
